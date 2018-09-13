@@ -65,6 +65,10 @@ include("core/init.php");
 	width:32px;
 	opacity:0;
 }
+.third{
+	max-height: 180px;
+	min-height: 180px;
+}
 label{
 	cursor: pointer;
 	padding-right: 15px;

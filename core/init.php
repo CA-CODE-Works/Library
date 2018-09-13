@@ -37,7 +37,7 @@ if( ! empty($keyword) ){
 		if( isset($response->response->docs) ){
 			$response = $response->response->docs;
 		}else{
-			print_r( get_object_vars($response[0]) );
+			//print_r( get_object_vars($response[0]) );
 		}
 		
 		foreach( $response as $r => $res){
