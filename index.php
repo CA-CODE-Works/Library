@@ -27,20 +27,28 @@ include("core/init.php");
 			<div class="section">
 				<div class="container">
 					<!-- Search Archive Form -->
-					<div class="full-width">
-            <form id="archivesearchform" method="GET">
-            <p>Search: <input type="text" name="keywords" value="<?= $keyword  ?>"> <input type="submit"><span class="ca-gov-icon-search"></span></p>
-            <p><label><input type="radio" name="sin" value="" <?= empty($sin) ? 'checked="checked"' : '' ?>> Search Metadata</label>
-              <label><input type="radio" name="sin" value="tv" <?= 'tv' == $sin ? 'checked="checked"' : '' ?>> Search TV News Captions</label>
-            </p>
-            </form>
-					</div>
+					<form id="archivesearchform" method="GET">
+						<div class="full-width">
+							<p>Search: <input type="text" name="keywords" value="<?= $keyword  ?>"> <input type="submit"><span class="ca-gov-icon-search"></span></p>
+							<p><label><input type="radio" name="sin" value="" <?= empty($sin) ? 'checked="checked"' : '' ?>> Search Metadata</label>
+								<label><input type="radio" name="sin" value="tv" <?= 'tv' == $sin ? 'checked="checked"' : '' ?>> Search TV News Captions</label>
+							</p>
+						</div>
+						<?php if( ! empty($output) ): ?>
+							<div class="quarter">
+								
+							</div>
+						<?php endif; ?>
+					</form>
 					<!-- End of Search Archive Form -->
-					<!-- Search Results -->
-					<div class="full-width">
-						<?= $output ?>
-					</div>
-					<!-- Search Results -->
+					<?php if( ! empty($output) ): ?>
+						<!-- Search Results -->
+						<div class="three-quarters">
+							<?= $output ?>
+						</div>
+						<!-- End of Search Results -->
+					<?php endif; ?>
+					
 					
 				</div>
 			</div>
