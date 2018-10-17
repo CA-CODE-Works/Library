@@ -17,7 +17,7 @@ include("core/init.php");
 			<!-- Begin Page Title -->
 			<div class="section section-standout">
 				<div class="container">
-					<h1 class="page-title">California Archives</h1>
+					<h1 class="page-title">California</h1>
 				</div>
 			</div>
 			<!-- End of Page Title -->
