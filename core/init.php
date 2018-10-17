@@ -1,4 +1,23 @@
 <?php
+/********************************************************************************************************
+Remove this when used is production, this will allow to update test different branches from the browser
+********************************************************************************************************/
+if( isset($_GET['action']) && 'update' == $_GET['action']){
+        $branch = isset($_GET['branch']) ? $_GET['branch'] : 'dev';
+
+        // Check that the branch exists
+        exec("git ls-remote --heads https://github.com/CA-CODE-Works/Library.git $branch | wc -l", $branch_check);
+
+        if( $branch_check ){
+                exec("git reset --hard");
+                exec("git checkout -b $branch");
+                exec("git pull origin $branch");
+                exec("git reset --hard origin/$branch");
+        }
+}
+/********************************************************************************************************
+Remove this when used is production, this will allow to update test different branches from the browser
+********************************************************************************************************/
 /*
 California Archive Library 2018
 
