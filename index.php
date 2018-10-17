@@ -55,15 +55,15 @@ include("core/init.php");
 		<!--BANNER-->
 <div class="carousel owl-carousel carousel-content">
                                         <div class="item">
-                                            <img src="/images/brown-banner3.jpg" alt="Governor Edmund G. Brown Jr">
+                                            <img src="images/brown-banner3.jpg" alt="Governor Edmund G. Brown Jr">
 
                                         </div>
                                         <div class="item">
-                                            <img src="/images/brown-banner2.jpg" alt="Governor Edmund G. Brown Jr">
+                                            <img src="images/brown-banner2.jpg" alt="Governor Edmund G. Brown Jr">
 
                                         </div>
                                         <div class="item">
-                                            <img src="/images/brown-banner1.jpg" alt="Governor Edmund G. Brown Jr">
+                                            <img src="images/brown-banner1.jpg" alt="Governor Edmund G. Brown Jr">
                                         </div>
                                     </div>
 
