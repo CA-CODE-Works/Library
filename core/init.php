@@ -10,7 +10,7 @@ if( isset($_GET['action']) && 'update' == $_GET['action']){
 
         if( $branch_check ){
                 exec("git reset --hard");
-                exec("git checkout -b $branch");
+                exec("git checkout $branch");
                 exec("git pull origin $branch");
                 exec("git reset --hard origin/$branch");
         }
