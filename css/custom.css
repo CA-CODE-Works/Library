@@ -1,0 +1,35 @@
+.header-organization-banner a img{
+	width: auto !important;
+}
+#archivesearchform .filters {
+    border-right: 1px solid;
+}
+#archivesearchform h5{
+	margin: 0px;
+    margin-bottom: 10px;
+	border-bottom: solid 1px grey;
+}
+#archivesearchform ul{
+	list-style-type: none;
+	padding-left: 0px;
+}
+#archivesearchform span{
+	font-size:32px;
+	vertical-align:middle;
+	margin-left:-32px;
+}
+#archivesearchform input[name="keywords"]{
+	width:90%;
+}
+#archivesearchform input[type="submit"]:not(.filter){
+	width:32px;
+	opacity:0;
+}
+.third{
+	max-height: 180px;
+	min-height: 180px;
+}
+label{
+	cursor: pointer;
+	padding-right: 15px;
+}
