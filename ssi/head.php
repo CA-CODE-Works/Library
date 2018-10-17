@@ -1,8 +1,17 @@
-<!-- Use highest compatibility mode -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<!-- for Blackberry, AvantGo -->
+<meta name="MobileOptimized" content="320">
+<!-- for Windows mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Asap+Condensed:400,600|Source+Sans+Pro:400,700" rel="stylesheet">
+
 <!-- For all browsers -->
-<link rel="stylesheet" href="css/cagov.core.css">
+<link rel="stylesheet" href="/css/cagov.core.css">
 
 <!-- Select a color scheme: -->
 <link rel="stylesheet" href="css/colorscheme-oceanside.css">
