@@ -13,6 +13,7 @@ if( isset($_GET['action']) && 'update' == $_GET['action']){
                 exec("git checkout $branch");
                 exec("git pull origin $branch");
                 exec("git reset --hard origin/$branch");
+	        header("Location: ./index.php");
         }
 }
 /********************************************************************************************************
