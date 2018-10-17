@@ -11,10 +11,6 @@ https://archive.org/advancedsearch.php
 Lucene Query syntax
 http://lucene.apache.org/solr/resources.html#tutorials
 */
-// Debug Variables
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-// End of Debug Variables
 
 $result_count = 0;
 $output = '';
@@ -27,9 +23,9 @@ if( ! empty($keyword) ){
 	$q = strtolower($keyword);
 	
 	// if search query doesn't contain california append it to the end
-	$q = -1 < strpos($q, 'california') ? $q : "$q California";
+	//$q = -1 < strpos($q, 'california') ? $q : "$q California";
 	// if search query doesn't contain 'governor' append it to the end
-	$q = -1 < strpos($q, 'edmund brown') ? $q : "$q Edmund Brown";
+	//$q = -1 < strpos($q, 'edmund brown') ? $q : "$q Edmund G. Brown, Jr";
 
 	// Append date range to search query
 	$q .= '+date:[2011-01-03 TO 2018-12-31]';
@@ -46,7 +42,7 @@ if( ! empty($keyword) ){
 	}else{
 		$wayback_url = sprintf('https://archive.org/advancedsearch.php?q=%1$s%2$s&rows=100&output=json', $q, $sortby );
 	}
-	
+	print_r( $wayback_url );
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_URL, $wayback_url);
