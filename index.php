@@ -8,22 +8,73 @@ include("core/init.php");
 <head>
 	<meta charset="utf-8">
 	<title>California Archives</title>
-	<!--#include virtual="ssi/head.html" -->
+	<?php include_once("ssi/head.php"); ?>
 </head>
 <body class="primary">
-	<?php include("ssi/header.html"); ?>
+
+    <script>
+        //makes the browser wait to display the page until it's fully loaded.
+        // Use it if page contains primary or slideshow banner to make sure page content loads smouthly
+        $('body').css('opacity', 0);
+        $(window).load(function () {
+            $("body").fadeTo("slow", 1);
+        });
+    </script>
+	    <header role="banner" id="header" class="global-header fixed">
+        <div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
+        
+    
+        <!-- Include Utility Header -->
+        <?php include_once("ssi/utility-header.php"); ?>
+        
+        <!-- Settings Bar -->
+        <?php include_once("ssi/settings-bar.php"); ?>
+
+        <!-- Include Branding -->
+        <?php include_once("ssi/branding.php"); ?>
+
+        <!-- Include Mobile Controls -->
+        <?php include_once("ssi/mobile-controls.php"); ?>
+    
+        <div class="navigation-search">
+            <div id="head-search" class="search-container featured-search fade">
+                <!-- Include Search -->
+                <?php include_once("ssi/search.php"); ?>
+            </div>
+            <!-- Include Navigation -->
+            <?php include_once("ssi/navigation.php"); ?>
+        </div>
+
+        <div class="header-decoration"></div>
+    </header>
+
+
 	<div id="main-content" class="main-content">
 		<main class="main-primary">
+
+		<!--BANNER-->
+<div class="carousel owl-carousel carousel-content">
+                                        <div class="item">
+                                            <img src="images/brown-banner3.jpg" alt="Governor Edmund G. Brown Jr">
+
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/brown-banner2.jpg" alt="Governor Edmund G. Brown Jr">
+
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/brown-banner1.jpg" alt="Governor Edmund G. Brown Jr">
+                                        </div>
+                                    </div>
+
+
 			<!-- Begin Page Title -->
-			<div class="section section-standout">
-				<div class="container">
-					<h1 class="page-title">California Archives</h1>
-				</div>
-			</div>
+			
 			<!-- End of Page Title -->
 			<!-- Begin Main Content -->
 			<div class="section">
 				<div class="container">
+				<h1>California Archives</h1>
 					<!-- Search Archive Form -->
 					<form id="archivesearchform" method="GET">
 						<div class="full-width">
@@ -64,8 +115,7 @@ include("core/init.php");
 			<!-- End Main Content -->
 		</main>
 	</div>
-
-	<?php include("ssi/global-footer.html") ?>
-
+	<?php include_once("ssi/global-footer.php"); ?>
+	
 </body>
 </html>
