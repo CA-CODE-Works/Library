@@ -34,4 +34,5 @@
 <div class="decoration-last">&nbsp;</div>
 
 
-<script src="js/cagov.core.js"></script>
+<!--Section Scripts-->
+<script src="/js/cagov.core.js"></script>
